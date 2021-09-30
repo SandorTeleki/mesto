@@ -1,0 +1,15 @@
+.card__reaction {
+    width: 22px;
+    height: 19px;
+    padding: 0;
+    border: none;
+    background: url(../../../images/heart.svg);
+    cursor: pointer;
+}
+
+.card__reaction:hover {
+    opacity: .5;
+    transition: .8s ease;
+/* temporary code until this can be done with JS */
+    background: url(../../../../images/heart_full.svg); 
+}
