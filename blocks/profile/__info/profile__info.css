@@ -6,9 +6,3 @@
     box-sizing: border-box;
     align-items: center;
 }
-
-@media screen and (min-width: 1280px) {
-    .profile__info {
-        
-    }
-}

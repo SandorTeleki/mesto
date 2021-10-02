@@ -18,7 +18,7 @@
     } 
 }
 
-@media screen and (min-width:1280px) {
+@media screen and (min-width: 900px) {
     .cards {
         padding-top: 51px;
         padding-bottom: 67px;

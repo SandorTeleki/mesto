@@ -7,7 +7,7 @@
     object-fit: cover;
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 900px) {
     .profile__picture {
         max-width: 168.75px;
     }

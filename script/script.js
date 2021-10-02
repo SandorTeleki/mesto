@@ -5,8 +5,8 @@ const profileInfo = document.querySelector(".profile__info");
 const formEdit = popupEdit.querySelector(".edit-form");
 const popupInputs = document.querySelector(".popup__inputs");
 
-const nameInput = popupEdit.querySelector(".popup__fullname")
-const jobInput = popupEdit.querySelector(".popup__description");
+const nameInput = popupEdit.querySelector("#fullname")
+const jobInput = popupEdit.querySelector("#description");
 const fullname = profileInfo.querySelector(".profile__title");
 const description = profileInfo.querySelector(".profile__description");
 

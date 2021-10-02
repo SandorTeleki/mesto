@@ -3,8 +3,8 @@
     height: 19px;
     padding: 0;
     border: none;
-    /* background: url(../../../images/heart.svg); */
-    background: url(../../../../mesto/images/heart.svg);
+    background: url(../../../images/heart.svg);
+    /* background: url(../../../../mesto/images/heart.svg); */
     cursor: pointer;
 }
 
@@ -12,6 +12,6 @@
     opacity: .5;
     transition: .8s ease;
 /* temporary code until this can be done with JS */
-    /* background: url(../../../../images/heart_full.svg); - did not appear in github page version */
-    background: url(../../../../mesto/images/heart_full.svg);
+    background: url(../../../../images/heart_full.svg);
+    /* background: url(../../../../mesto/images/heart_full.svg); */
 }
