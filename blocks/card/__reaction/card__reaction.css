@@ -11,5 +11,5 @@
     opacity: .5;
     transition: .8s ease;
 /* temporary code until this can be done with JS */
-    background: url(../../../../images/heart_full.svg);
+    background: url(../../../images/heart_full.svg);
 }
