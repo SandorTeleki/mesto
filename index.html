@@ -37,6 +37,7 @@
           <h2 class="card__title">Будапешт</h2>
           <button type="button" aria-label="лайк" class="card__reaction"></button>
         </div>
+        <button type="button" aria-label="удалить" class="card__delete"></button>
       </div>
       <div class="card">
         <img src="./images/ekmeds-maldives.jpg" alt="Мальдивы - пальмы на пляже" class="card__picture">
@@ -44,6 +45,7 @@
           <h2 class="card__title">Мальдивы</h2>
           <button type="button" aria-label="лайк" class="card__reaction"></button>
         </div>
+        <button type="button" aria-label="удалить" class="card__delete"></button>
       </div>
       <div class="card">
         <img src="./images/remi-prevost-bangkok.jpg" alt="Бангкок - храм" class="card__picture">
@@ -51,6 +53,7 @@
           <h2 class="card__title">Бангкок</h2>
           <button type="button" aria-label="лайк" class="card__reaction"></button>
         </div>
+        <button type="button" aria-label="удалить" class="card__delete"></button>
       </div>
       <div class="card">
         <img src="./images/leonardo-marinho-rio-de-janeiro.jpg" alt="Рио-де-Жанейро - Пан-ди-Асукар" class="card__picture">
@@ -58,6 +61,7 @@
           <h2 class="card__title">Рио-де-Жанейро</h2>
           <button type="button" aria-label="лайк" class="card__reaction"></button>
         </div>
+        <button type="button" aria-label="удалить" class="card__delete"></button>
       </div>
       <div class="card">
         <img src="./images/martin-katler-bratislava.jpg" alt="Братислава - замок" class="card__picture">
@@ -65,6 +69,7 @@
           <h2 class="card__title">Братислава</h2>
           <button type="button" aria-label="лайк" class="card__reaction"></button>
         </div>
+        <button type="button" aria-label="удалить" class="card__delete"></button>
       </div>
       <div class="card">
         <img src="./images/christoph-schulz-dubai.jpg" alt="Дубай - Бурдж-эль-Араб" class="card__picture">
@@ -72,6 +77,7 @@
           <h2 class="card__title">Дубай</h2>
           <button type="button" aria-label="лайк" class="card__reaction"></button>
         </div>
+        <button type="button" aria-label="удалить" class="card__delete"></button>
       </div>
     </section>
   </main>
@@ -96,6 +102,19 @@
       </form>
     </div>
   </div>
+
+<!-- Card Template -->
+
+<template id="card-template">
+  <div class="card">
+    <img src="" alt="" class="card__picture">
+    <div class="card__box">
+      <h2 class="card__title"></h2>
+      <button type="button" aria-label="лайк" class="card__reaction"></button>
+    </div>
+    <button type="button" aria-label="удалить" class="card__delete"></button>
+  </div>
+</template>
 
 <!-- JavaScript -->
   <script src="./script/script.js"></script>
