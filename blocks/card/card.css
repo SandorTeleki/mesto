@@ -1,7 +1,9 @@
 .card {
+    display: grid;
+    grid-template-columns: 1fr 44px;
+    grid-template-rows: 282px 1fr;
+    cursor: pointer;
     border-radius: 10px;
     background-color: #fff;
     max-width: 282px;
-    display: flex;
-    flex-direction: column;
 }

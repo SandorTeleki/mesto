@@ -18,8 +18,9 @@ const description = profileInfo.querySelector(".profile__description");
 const formEdit = popupEdit.querySelector(".edit-form");
 
 const popupInputs = document.querySelector(".popup__inputs");
-const cardDeleteButton = document.querySelector(".card__delete");
 const card = document.querySelector(".card");
+const cardDeleteButton = document.querySelector(".card__delete");
+
 
 
 
@@ -71,6 +72,18 @@ document.querySelector('.card__reaction').addEventListener('click', function (ev
 
 // profileEditButton.addEventListener('click', togglePopupEdit);
 // profileCloseButton.addEventListener('click', togglePopupEdit);
+
+
+
+
+// Create Card
+
+function createCard(cardInfo) {
+    const cardTemplate = document.querySelector(".card-template").content;
+    const cardUnit = cardTemplate.querySelector(".card").cloneNode('true');
+    const cardPicture = cardUnit.querySelector(".card__picture");
+
+}
 
 
 function openPopupEdit() {
