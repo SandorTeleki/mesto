@@ -1,15 +1,27 @@
 const popupEdit = document.querySelector(".popup_edit");
+const popupAdd = document.querySelector(".popup_add");
+const popup = document.querySelector(".popup")
 const profileEditButton = document.querySelector(".profile__edit-button");
 const profileAddButton = document.querySelector(".profile__add-button");
-const profileCloseButton = document.querySelector(".popup__close-button");
-const profileInfo = document.querySelector(".profile__info");
-const formEdit = popupEdit.querySelector(".edit-form");
-const popupInputs = document.querySelector(".popup__inputs");
+const closeButton = document.querySelector(".popup__close-button");
 
+//Test
+const editCloseButton = popupEdit.querySelector(".popup__close-button");
+const addCloseButton = popupAdd.querySelector(".popup__close-button");
+// Test closed
+
+const profileInfo = document.querySelector(".profile__info");
 const nameInput = popupEdit.querySelector("#fullname")
 const jobInput = popupEdit.querySelector("#description");
 const fullname = profileInfo.querySelector(".profile__title");
 const description = profileInfo.querySelector(".profile__description");
+const formEdit = popupEdit.querySelector(".edit-form");
+
+const popupInputs = document.querySelector(".popup__inputs");
+const cardDeleteButton = document.querySelector(".card__delete");
+const card = document.querySelector(".card");
+
+
 
 
 const initialCards = [
@@ -40,6 +52,10 @@ const initialCards = [
 ];
 
 
+cardDeleteButton.addEventListener('click', (evt) => {
+    card.remove();
+}); //only working for first card ATM
+
 document.querySelector('.card__reaction').addEventListener('click', function (evt) {
     evt.target.classList.toggle('card__reaction_active');
   }); //only working for first card ATM
@@ -63,9 +79,24 @@ function openPopupEdit() {
     popupEdit.classList.add("popup_opened");
 }
 
+function closePopup() {
+    popup.classList.remove("popup_opened");
+}
+
 function closePopupEdit() {
     popupEdit.classList.remove("popup_opened");
 }
+
+
+function openPopupAdd() {
+    popupAdd.classList.add("popup_opened");
+}
+
+function closePopupAdd() {
+    popupAdd.classList.remove("popup_opened");
+}
+
+
 
 function submitFormHandler(event) {
     event.preventDefault();
@@ -75,7 +106,15 @@ function submitFormHandler(event) {
 }
 
 profileEditButton.addEventListener('click', openPopupEdit);
-profileCloseButton.addEventListener('click', closePopupEdit);
+// closeButton.addEventListener('click', closePopupEdit); ~~ Old version from sprint 4
+
+editCloseButton.addEventListener('click', closePopupEdit);
+
+profileAddButton.addEventListener('click', openPopupAdd);
+addCloseButton.addEventListener('click', closePopupAdd);
+
+
+closeButton.addEventListener('click', closePopupAdd); //need to make it for "popup close button, not profile close button"
 // popupInputs.addEventListener('submit', submitFormHandler); -- Doesn't work for some reason...
 formEdit.addEventListener('submit', submitFormHandler);
 
