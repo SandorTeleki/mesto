@@ -31,45 +31,10 @@
 
 <!--Cards-->
     <section class="cards">
-      <div class="card">
-        <img src="./images/daniel-olah-budapest.jpg" alt="Будапешт - Мост Свободы" class="card__picture">
-        <h2 class="card__title">Будапешт</h2>
-        <button type="button" aria-label="лайк" class="card__reaction"></button>
-        <button type="button" aria-label="удалить" class="card__delete"></button>
-      </div>
-      <div class="card">
-        <img src="./images/ekmeds-maldives.jpg" alt="Мальдивы - пальмы на пляже" class="card__picture">
-        <h2 class="card__title">Мальдивы</h2>
-        <button type="button" aria-label="лайк" class="card__reaction"></button>
-        <button type="button" aria-label="удалить" class="card__delete"></button>
-      </div>
-      <div class="card">
-        <img src="./images/remi-prevost-bangkok.jpg" alt="Бангкок - храм" class="card__picture">
-        <h2 class="card__title">Бангкок</h2>
-        <button type="button" aria-label="лайк" class="card__reaction"></button>
-        <button type="button" aria-label="удалить" class="card__delete"></button>
-      </div>
-      <div class="card">
-        <img src="./images/leonardo-marinho-rio-de-janeiro.jpg" alt="Рио-де-Жанейро - Пан-ди-Асукар" class="card__picture">
-        <h2 class="card__title">Рио-де-Жанейро</h2>
-        <button type="button" aria-label="лайк" class="card__reaction"></button>
-        <button type="button" aria-label="удалить" class="card__delete"></button>
-      </div>
-      <div class="card">
-        <img src="./images/martin-katler-bratislava.jpg" alt="Братислава - замок" class="card__picture">
-        <h2 class="card__title">Братислава</h2>
-        <button type="button" aria-label="лайк" class="card__reaction"></button>
-        <button type="button" aria-label="удалить" class="card__delete"></button>
-      </div>
-      <div class="card">
-        <img src="./images/christoph-schulz-dubai.jpg" alt="Дубай - Бурдж-эль-Араб" class="card__picture">
-        <h2 class="card__title">Дубай</h2>
-        <button type="button" aria-label="лайк" class="card__reaction"></button>
-        <button type="button" aria-label="удалить" class="card__delete"></button>
-      </div>
+      <ul class="cards__list">
+      </ul>
     </section>
   </main>
-
 <!-- Section: Footer -->
   <footer class="footer">
     <div class="footer__copyright">&copy;2021. Mesto Russia</div>
@@ -85,44 +50,41 @@
           <input type="text" name="fullname" placeholder="имя" value="" class="popup__input" id="fullname">
           <input type="text" name="description" placeholder="работа" value="" class="popup__input" id="description">
           <button type="submit" class="popup__submit-button">Сохранить</button>
-          <!-- <input type="submit" value="Сохранить" class="popup__submit-button"> -->
         </fieldset>
       </form>
     </div>
   </div>
 
 <!-- Popup - Add -->
-<div class="popup popup_add">
-  <div class="popup__container">
-    <button type="button" class="popup__close-button"></button>
-    <form name ="edit-form" class="edit-form">
-      <h2 class="popup__heading">Новое место</h2>
-      <fieldset class="popup__inputs">
-        <input type="text" name="location-name" placeholder="Название" value="" class="popup__input" id="location-name">
-        <input type="text" name="link" placeholder="Ссылка на картинку" value="" class="popup__input" id="link">
-        <button type="submit" class="popup__submit-button">Сохранить</button>
-      </fieldset>
-    </form>
+  <div class="popup popup_add">
+    <div class="popup__container">
+      <button type="button" class="popup__close-button" id="popup-add-close"></button>
+      <form name ="edit-form" class="edit-form" id="popup-add-form">
+        <h2 class="popup__heading">Новое место</h2>
+        <fieldset class="popup__inputs">
+          <input type="text" name="location-name" placeholder="Название" value="" class="popup__input" id="add-title">
+          <input type="text" name="link" placeholder="Ссылка на картинку" value="" class="popup__input" id="add-link">
+          <button type="submit" class="popup__submit-button">Сохранить</button>
+        </fieldset>
+      </form>
+    </div>
   </div>
-</div>
 
 <!-- Popup - Full-size Picture -->
-<div class="popup">
-  <div class="">
-    <img src="" alt="" class="">
+<div class="popup popup_full-picture">
+  <div class="popup__frame">
+    <button type="button" class="popup__close-button" id="popup-image-close"></button>
+    <img src=" " alt=" " class="popup__image"> 
     <p class="popup__caption"></p>
-    <button type="button" class="popup__close-button"></button>
   </div>
 </div>
 
 <!-- Card Template -->
 <template id="card-template">
   <div class="card">
-    <img src="" alt="" class="card__picture">
-    <div class="card__box">
-      <h2 class="card__title"></h2>
-      <button type="button" aria-label="лайк" class="card__reaction"></button>
-    </div>
+    <img src=" " alt=" " class="card__picture">
+    <h2 class="card__title"></h2>
+    <button type="button" aria-label="лайк" class="card__reaction"></button>
     <button type="button" aria-label="удалить" class="card__delete"></button>
   </div>
 </template>
