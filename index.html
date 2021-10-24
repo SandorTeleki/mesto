@@ -47,8 +47,8 @@
       <form name ="edit-form" class="edit-form">
         <h2 class="popup__heading">Редактировать профиль</h2>
         <fieldset class="popup__inputs">
-          <input type="text" name="fullname" placeholder="имя" value="" class="popup__input" id="fullname">
-          <input type="text" name="description" placeholder="работа" value="" class="popup__input" id="description">
+          <input type="text" name="fullname" placeholder="имя" value="" class="popup__input" id="fullname" min-length="2" max-length="40" required>
+          <input type="text" name="description" placeholder="работа" value="" class="popup__input" id="description" min-length="2" max-length="200" required>
           <button type="submit" class="popup__submit-button">Сохранить</button>
         </fieldset>
       </form>
@@ -62,8 +62,8 @@
       <form name ="edit-form" class="edit-form" id="popup-add-form">
         <h2 class="popup__heading">Новое место</h2>
         <fieldset class="popup__inputs">
-          <input type="text" name="location-name" placeholder="Название" value="" class="popup__input" id="add-title">
-          <input type="text" name="link" placeholder="Ссылка на картинку" value="" class="popup__input" id="add-link">
+          <input type="text" name="location-name" placeholder="Название" value="" class="popup__input" id="add-title" min-length="2" max-length="30" required>
+          <input type="text" name="link" placeholder="Ссылка на картинку" value="" class="popup__input" id="add-link" type="url" required>
           <button type="submit" class="popup__submit-button">Сохранить</button>
         </fieldset>
       </form>
@@ -91,5 +91,6 @@
 
 <!-- JavaScript -->
   <script src="./script/script.js"></script>
+  <script src="./script/validate.js"></script>
 </body>
 </html>

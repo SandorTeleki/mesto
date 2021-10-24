@@ -150,6 +150,8 @@ initialCards.forEach(function (chosenCard) {
 });
 
 
+
+
 //Call back functions
 profileEditButton.addEventListener('click', openPopupEdit);
 formEdit.addEventListener('submit', submitFormHandler);
