@@ -6,8 +6,8 @@
     border: 0;
     padding-bottom: 13px;
     border-bottom: 1px solid rgba(0, 0, 0, .2);
-};
+}
 
 .popup__input:focus {
     background: rgba( 30, 30, 30, .1);
-};
+}
