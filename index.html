@@ -46,9 +46,11 @@
       <button type="button" class="popup__close-button"></button>
       <form name ="edit-form" class="edit-form">
         <h2 class="popup__heading">Редактировать профиль</h2>
-        <fieldset class="popup__inputs">
-          <input type="text" name="fullname" placeholder="имя" value="" class="popup__input" id="fullname" min-length="2" max-length="40" required>
-          <input type="text" name="description" placeholder="работа" value="" class="popup__input" id="description" min-length="2" max-length="200" required>
+        <fieldset class="popup__inputs" form="edit-form">
+          <input type="text" name="fullname" placeholder="имя" value="" class="popup__input" id="fullname" required minlength="2" maxlength="40">
+          <span class="fullname-error popup__error" id="fullname-error"></span>
+          <input type="text" name="description" placeholder="работа" value="" class="popup__input" id="description" required minlength="2" maxlength="200">
+          <span class="description-error popup__error" id="description-error"></span>
           <button type="submit" class="popup__submit-button">Сохранить</button>
         </fieldset>
       </form>
@@ -61,9 +63,11 @@
       <button type="button" class="popup__close-button" id="popup-add-close"></button>
       <form name ="edit-form" class="edit-form" id="popup-add-form">
         <h2 class="popup__heading">Новое место</h2>
-        <fieldset class="popup__inputs">
-          <input type="text" name="location-name" placeholder="Название" value="" class="popup__input" id="add-title" min-length="2" max-length="30" required>
-          <input type="text" name="link" placeholder="Ссылка на картинку" value="" class="popup__input" id="add-link" type="url" required>
+        <fieldset class="popup__inputs" form="edit-form">
+          <input type="text" name="location-name" placeholder="Название" value="" class="popup__input" id="add-title" required minlength="2" maxlength="30">
+          <span class="add-title-error popup__error" id="title-error"></span>
+          <input type="url" name="link" placeholder="Ссылка на картинку" value="" class="popup__input" id="add-link" required >
+          <span class="add-link-error popup__error" id="url-error"></span>
           <button type="submit" class="popup__submit-button">Сохранить</button>
         </fieldset>
       </form>
@@ -71,26 +75,26 @@
   </div>
 
 <!-- Popup - Full-size Picture -->
-<div class="popup popup_full-picture">
-  <div class="popup__frame">
-    <button type="button" class="popup__close-button" id="popup-image-close"></button>
-    <img src=" " alt=" " class="popup__image"> 
-    <p class="popup__caption"></p>
+  <div class="popup popup_full-picture">
+    <div class="popup__frame">
+      <button type="button" class="popup__close-button" id="popup-image-close"></button>
+      <img src=" " alt=" " class="popup__image"> 
+      <p class="popup__caption"></p>
+    </div>
   </div>
-</div>
 
 <!-- Card Template -->
-<template id="card-template">
-  <div class="card">
-    <img src=" " alt=" " class="card__picture">
-    <h2 class="card__title"></h2>
-    <button type="button" aria-label="лайк" class="card__reaction"></button>
-    <button type="button" aria-label="удалить" class="card__delete"></button>
-  </div>
-</template>
+  <template id="card-template">
+    <div class="card">
+      <img src=" " alt=" " class="card__picture">
+      <h2 class="card__title"></h2>
+      <button type="button" aria-label="лайк" class="card__reaction"></button>
+      <button type="button" aria-label="удалить" class="card__delete"></button>
+    </div>
+  </template>
 
 <!-- JavaScript -->
+  <script src="./script/validate.js"></script>  
   <script src="./script/script.js"></script>
-  <script src="./script/validate.js"></script>
 </body>
 </html>

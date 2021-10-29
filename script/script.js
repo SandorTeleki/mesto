@@ -48,9 +48,11 @@ const initialCards = [
 ];
 
 
+
 //Open Popup
 const openPopup = function (popup) {
     popup.classList.add('popup_opened');
+    document.addEventListener('keydown', closeThroughEscape); //Close popups through 'Escape' key
 };
 
 
@@ -150,6 +152,20 @@ initialCards.forEach(function (chosenCard) {
 });
 
 
+//Closing popups by pressing 'Esc' key
+function closeThroughEscape(event) {
+    if (event.key === 'Escape') {
+        document.querySelector('.popup_opened').classList.remove('popup_opened');
+        document.removeEventListener('keydown', closeThroughEscape);
+    };
+};
+
+
+//Closing popups by clicking on overaly
+document.addEventListener('click', function (event) {
+    event.target.classList.remove('popup_opened');
+    event.stopPropagation();
+});
 
 
 //Call back functions
