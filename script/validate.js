@@ -1,3 +1,12 @@
+enableValidation ({
+  formSelector: '.edit-form',
+  inputSelector: '.popup__input',
+  submitButtonSelector: '.popup__submit-button', 
+  inactiveButtonClass: 'popup__button-disabled', 
+  inputErrorClass: 'popup__input_error',
+  spanErrorClass: 'popup__error_visible',
+});
+
 function displayInputError (formElement, inputElement, errorMessage, {inputErrorClass, spanErrorClass}) {
     const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
     inputElement.classList.add(inputErrorClass);
@@ -41,15 +50,6 @@ function displayInputError (formElement, inputElement, errorMessage, {inputError
       setEventListeners(formElement, rest);
     });
   };
-  
-  enableValidation ({
-    formSelector: '.edit-form',
-    inputSelector: '.popup__input',
-    submitButtonSelector: '.popup__submit-button', 
-    inactiveButtonClass: 'popup__button-disabled', 
-    inputErrorClass: 'popup__input_error',
-    spanErrorClass: 'popup__error_visible',
-  });
   
   function hasInvalidInput (inputList) {
     return inputList.some((inputElement) => {
