@@ -20,6 +20,7 @@ const popupAddLink = document.querySelector("#add-link");
 const popupCaption = document.querySelector(".popup__caption");
 const popupImage = document.querySelector(".popup__image");
 
+
 const initialCards = [
     {
         name: 'Будапешт',
@@ -48,12 +49,13 @@ const initialCards = [
 ];
 
 
-
 //Open Popup
 const openPopup = function (popup) {
     popup.classList.add('popup_opened');
-    document.addEventListener('keydown', closeThroughEscape); //Close popups through 'Escape' key
+    document.addEventListener('keydown', closeOnEscape); //Close popups through 'Escape' key
+    hide();
 };
+
 
 
 //Close Popup
@@ -63,7 +65,7 @@ const closePopup = function (popup) {
 
 
 //Open the Edit Popup
-function openPopupEdit (event) {
+function openPopupEdit () {
     openPopup(popupEdit);
     nameInput.value = fullname.textContent;
     jobInput.value = description.textContent;
@@ -110,7 +112,6 @@ function popupFullSize(chosenCard) {
 
 //Close Full size image (popup image) 
 popupImageCloseButton.addEventListener('click', function () {
-    const closeEditCard = popupImageCloseButton.closest('.popup_full-picture');
     closePopup(fullPicture);
 });
 
@@ -153,10 +154,10 @@ initialCards.forEach(function (chosenCard) {
 
 
 //Closing popups by pressing 'Esc' key
-function closeThroughEscape(event) {
+function closeOnEscape(event) {
     if (event.key === 'Escape') {
         document.querySelector('.popup_opened').classList.remove('popup_opened');
-        document.removeEventListener('keydown', closeThroughEscape);
+        document.removeEventListener('keydown', closeOnEscape);
     };
 };
 
