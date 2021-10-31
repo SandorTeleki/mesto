@@ -22,7 +22,7 @@ function hideInputError (formElement, inputElement, {inputErrorClass, spanErrorC
 };
 
 function isValid (formElement, inputElement, rest) {
-  if (!inputElement.validity.valid && (!inputElement.validity.valueMissing || validateEmpty)) {
+  if (!inputElement.validity.valid ) {
     displayInputError (formElement, inputElement, inputElement.validationMessage, rest);
   } else {
     hideInputError (formElement, inputElement, rest);
@@ -32,7 +32,7 @@ function isValid (formElement, inputElement, rest) {
 function setEventListeners (formElement, selectors) {
   const inputList = Array.from(formElement.querySelectorAll(selectors.inputSelector));
   inputList.forEach((inputElement) => {
-    inputElement.addEventListener('input', function () {
+    inputElement.addEventListener('input' || 'keydown', function () {
       isValid(formElement, inputElement, selectors);
       updateSubmitStatus(formElement, selectors);
     });
@@ -81,3 +81,16 @@ const hide = () => {
   //submit.removeAttribute('disabled');
   resetSubmitButton.classList.remove('popup__button-disabled');
 };
+
+// function emptyInputError(enableValidation) {
+//   const emptyInputName = document.querySelector('#add-title').value;
+//   const emptyInputLink = document.querySelector('#add-link').value;
+//   if (emptyInputName === '') {
+//     displayInputError (formElement, inputElement, errorMessage, {inputErrorClass, spanErrorClass});
+//   }
+//   if (emptyInputLink === '') {
+//     displayInputError (formElement, inputElement, errorMessage, {inputErrorClass, spanErrorClass});
+//   }
+// };
+
+// emptyInputError();
