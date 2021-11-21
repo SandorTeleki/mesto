@@ -11,7 +11,7 @@ function displayInputError (formElement, inputElement, errorMessage, {inputError
     const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
     inputElement.classList.add(inputErrorClass);
     errorElement.textContent = errorMessage;
-    errorElement.classList.add(spanErrorClass );
+    errorElement.classList.add(spanErrorClass);
   };
   
 function hideInputError (formElement, inputElement, {inputErrorClass, spanErrorClass}) {
