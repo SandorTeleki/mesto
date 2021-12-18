@@ -6,6 +6,8 @@ import Section from '../components/Section.js';
 import { initialCards, configuration, cardsList, popupEditForm, popupEdit, popupAdd,  fullPicture, popupAddForm, profileEditButton, profileAddButton, nameInput, jobInput, fullname, description} from '../utils/constants.js';
 import UserInfo from '../components/UserInfo.js';
 import createCard from '../utils/utils.js';
+import Api from '../components/Api.js'
+
 
 const image = new PopupWithImage(fullPicture);
 image.setEventListeners();
@@ -49,3 +51,11 @@ const formValPlace = new FormValidator(configuration, popupAddForm);
 
 formValProf.enableValidation();
 formValPlace.enableValidation();
+
+const api = new Api ({
+  serverURL: 'https://mesto.nomoreparties.co/v1/cohort-31',
+  headers: {
+    authorization: '740b2dd9-b0c6-4001-a722-b6687d6e9ed0',
+    'Content-Type': 'application/json'
+  }
+});

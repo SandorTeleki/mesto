@@ -23,6 +23,25 @@
     }  
 }
 
+
+.popup__submit-button_active {
+    content: "Сохранить...";
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: black;
+    color: white;
+  }
+
+.popup__submit-button_active::before {
+    display: flex;
+}
+
 .popup__submit-button:hover {
     opacity: 0.8;
     transition: .8s ease;
