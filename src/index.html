@@ -18,10 +18,12 @@
 <!-- Profile -->
     <section class="profile">
       <div class="profile__container">
-        <img src="<%=require('./images/jacques_yves_cousteau.jpg')%>" alt="фото профиля" class="profile__picture">
+        <div class="profile__avatar">
+          <img src="<%=require('./images/jacques_yves_cousteau.jpg')%>" alt="фото профиля" class="profile__picture">
+        </div>
         <div class="profile__info">
-          <h1 class="profile__title">Жак-Ив Кусто</h1>
-          <p class="profile__description">Исследователь океана</p>
+          <h1 class="profile__title"></h1>
+          <p class="profile__description"></p>
           <button type="button" aria-label="знак редактировать" class="profile__edit-button"></button>
         </div>
       </div>
@@ -34,6 +36,7 @@
       </ul>
     </section>
   </main>
+
 <!-- Section: Footer -->
   <footer class="footer">
     <div class="footer__copyright">&copy;2021. Mesto Russia</div>
@@ -43,13 +46,13 @@
   <div class="popup popup_edit">
     <div class="popup__container">
       <button type="button" class="popup__close-button"></button>
-      <form name ="edit-form" class="edit-form">
-        <h2 class="popup__heading">Редактировать профиль</h2>
+      <form name ="edit-form" class="edit-form" id="popup-edit-form">
         <fieldset class="popup__inputs" form="edit-form">
-          <input type="text" name="fullname" placeholder="имя" value="" class="popup__input" id="fullname" required minlength="2" maxlength="40">
-          <span class="fullname-error popup__error" id="fullname-error"></span>
-          <input type="text" name="description" placeholder="работа" value="" class="popup__input" id="description" required minlength="2" maxlength="200">
-          <span class="description-error popup__error" id="description-error"></span>
+          <h2 class="popup__heading">Редактировать профиль</h2>
+          <input type="text" name="name" placeholder="имя" value="" class="popup__input" id="nameinput" required minlength="2" maxlength="40">
+          <span class="nameinput-error popup__error" id="nameinput-error"></span>
+          <input type="text" name="description" placeholder="работа" value="" class="popup__input" id="jobdescription" required minlength="2" maxlength="200">
+          <span class="jobdescription-error popup__error" id="jobdescription-error"></span>
           <button type="submit" class="popup__submit-button" disabled>Сохранить</button>
         </fieldset>
       </form>
@@ -61,11 +64,11 @@
     <div class="popup__container">
       <button type="button" class="popup__close-button" id="popup-add-close"></button>
       <form name ="edit-form" class="edit-form" id="popup-add-form">
-        <h2 class="popup__heading">Новое место</h2>
         <fieldset class="popup__inputs" form="edit-form">
-          <input type="text" name="add-title" placeholder="Название" class="popup__input" id="add-title" required minlength="2" maxlength="30">
+          <h2 class="popup__heading">Новое место</h2>
+          <input type="text" name="name" placeholder="Название" class="popup__input" id="add-title" required minlength="2" maxlength="30">
           <span class="add-title-error popup__error" id="title-error"></span>
-          <input type="url" name="add-link" placeholder="Ссылка на картинку" class="popup__input" id="add-link" required >
+          <input type="url" name="link" placeholder="Ссылка на картинку" class="popup__input" id="add-link" required >
           <span class="add-link-error popup__error" id="url-error"></span>
           <button type="submit" class="popup__submit-button popup__button-disabled" disabled>Сохранить</button>
         </fieldset>
@@ -82,12 +85,43 @@
     </div>
   </div>
 
+<!-- Popup - Delete Picture -->
+<div class="popup popup_delete_picture">
+  <div class="popup__container">
+    <button type="button" class="popup__close-button"></button>
+    <form name ="edit-form" class="edit-form" id="popup-delete-picture-form">
+      <fieldset class="popup__inputs" form="edit-form">
+        <h2 class="popup__heading">Вы уверены?</h2>
+        <button type="submit" class="popup__submit-button popup__submit-button_type_confirm-delete-form">Да</button>
+      </fieldset>
+    </form>
+  </div>
+</div>
+
+<!-- Popup - Update Avatar/Profile Picture -->
+  <div class="popup popup_avatar_picture">
+    <div class="popup__container">
+      <button type="button" class="popup__close-button"></button>
+      <form name ="edit-form" class="edit-form" id="popup-edit-picture-form">
+        <fieldset class="popup__inputs" form="edit-form">
+          <h2 class="popup__heading">Обновить аватар</h2>
+          <input type="url" name="link" placeholder="Ссылка на картинку профиля" class="popup__input" id="edit-link" required >
+          <span class="edit-link-error popup__error" id="url-error"></span>
+          <button type="submit" class="popup__submit-button" disabled>Сохранить</button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+
 <!-- Card Template -->
   <template class="card-template" id="card-template">
     <div class="card">
-      <img src=" " alt=" " class="card__picture">
+      <img src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg" alt="test" class="card__picture">
       <h2 class="card__title"></h2>
-      <button type="button" aria-label="лайк" class="card__reaction"></button>
+      <div class="card__like-section">
+        <button type="button" aria-label="лайк" class="card__reaction"></button>
+        <span class="card__like-quantity"></span>
+      </div>
       <button type="button" aria-label="удалить" class="card__delete"></button>
     </div>
   </template>
