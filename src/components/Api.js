@@ -33,12 +33,12 @@ export default class Api {
         })
     }
 
-    editProfile({name, description}) {    ///////////////////// name, description
+    editProfile({name, description}) {
         return fetch(this._URL + '/users/me', {
           method: 'PATCH',
           headers: this._headers,
           body: JSON.stringify({
-              name: name,
+              name: name, 
               about: description
           })
         })
@@ -48,7 +48,7 @@ export default class Api {
         })
     }
 
-    updateUserAvatar(avatarLink) {   /////////////////////// avatarLink
+    updateUserAvatar(avatarLink) {
         return fetch(this._URL + '/users/me/avatar', {
             method: 'PATCH',
             headers: this._headers,
@@ -58,7 +58,7 @@ export default class Api {
         })
 
         .then((res) => {
-            return this._handleError(res, 'Ошибка! Не удалось загрузить аватар пользователя');
+            return this._handleError(res, 'Ошибка! Не удалось загрузить новую аватарку пользователя');
         })
     }
 
@@ -77,7 +77,7 @@ export default class Api {
         })
     }
 
-    deleteCard(cardId) {  ///////////////
+    deleteCard(cardId) {
         return fetch(this._URL + '/cards/' + cardId, {
             method: 'DELETE',
             headers: this._headers
@@ -88,7 +88,7 @@ export default class Api {
         })
     }
 
-    likeCard(cardId) { //////////////
+    likeCard(cardId) { 
         return fetch(this._URL + '/cards/' + cardId + '/likes', {
             method: 'PUT',
             headers: this._headers
