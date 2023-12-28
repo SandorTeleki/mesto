@@ -1,3 +1,5 @@
+(English description below)
+
 # Проект: Место
 
 ### Описание проекта:
@@ -11,4 +13,21 @@
 На данный моменет, некакие.
 
 Страница на Github: https://sandorteleki.github.io/mesto/
-&copy; 2021 Шандор Телеки
+&copy; 2023 Шандор Телеки
+
+--------------------------------------------------------
+
+# Project: Mesto
+
+### Project description:
+Project about a variety of places. Project mockup was provided through Figma.
+Supports screenwidths: 320 and 1280px. Using: grid, flex, transition, opacity, hover and JavaScript.
+
+### System requirements for viewing the project:
+Code written in HMTL5 and the page should work in all major browsers at various screen sizes.
+
+### Plans for further improvement:
+None for the moment.
+
+Page is hosted through Github pages: https://sandorteleki.github.io/mesto/
+&copy; 2023 Sandor Teleki
